@@ -1,11 +1,20 @@
 # Created by https://www.toptal.com/developers/gitignore/api/nextjs,python,venv,opencv
 # Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,python,venv,opencv
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 ### NextJS ###
 # dependencies
+node_modules
+node_modules/
 /node_modules
 /.pnp
+.pnp.*
 .pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
@@ -29,6 +38,8 @@ yarn-error.log*
 
 # local env files
 .env*.local
+# env files (can opt-in for committing if needed)
+.env*
 
 # vercel
 .vercel
