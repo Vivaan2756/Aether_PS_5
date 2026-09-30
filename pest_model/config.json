@@ -1,0 +1,26 @@
+{
+    "features": [
+        "latitude",
+        "longitude",
+        "crop",
+        "crop_stage",
+        "temperature",
+        "temperature_max",
+        "temperature_min",
+        "humidity",
+        "rainfall",
+        "wind_speed",
+        "ndvi",
+        "ndre",
+        "ndwi",
+        "ndvi_change_7d",
+        "ndvi_change_14d",
+        "soil_ph",
+        "soil_nitrogen",
+        "soil_moisture",
+        "previous_pest_incidence"
+    ],
+    "classification_threshold": 50,
+    "alert_threshold": 0.75,
+    "model_type": "XGBClassifier"
+}
