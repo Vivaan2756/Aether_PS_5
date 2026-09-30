@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+:root {
+  --cropin-green: #7ac15c;
+  --cropin-green-hover: #68ab4b;
+  --cropin-dark: #111827;
+  --cropin-forest: #053b26;
+  --cropin-slate: #475569;
+  --cropin-border: #e5e7eb;
+}
+
+body {
+  color: #1f2937;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Cropin Signature Buttons */
+.cropin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.cropin-btn-primary {
+  background-color: #7ac15c;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(122, 193, 92, 0.35);
+}
+.cropin-btn-primary:hover {
+  background-color: #68ab4b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122, 193, 92, 0.45);
+}
+
+.cropin-btn-dark {
+  background-color: #053b26;
+  color: #ffffff;
+}
+.cropin-btn-dark:hover {
+  background-color: #03281a;
+  transform: translateY(-2px);
+}
+
+.cropin-btn-outline {
+  border: 1.5px solid #7ac15c;
+  color: #053b26;
+  background: transparent;
+}
+.cropin-btn-outline:hover {
+  background-color: #f0fdf4;
+  border-color: #68ab4b;
+}
+
+/* Cropin Card & Box Styles */
+.cropin-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cropin-card:hover {
+  border-color: #7ac15c;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7ac15c;
+}
+
+/* Background Changing & Ambient Animations */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.02) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, -0.5%);
+  }
+  100% {
+    transform: scale(1.15) translate(0.5%, 0.5%);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenburns 10s ease-in-out infinite alternate;
+}
+
+@keyframes progress-fill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-progress-fill {
+  animation: progress-fill 6.5s linear forwards;
+}
+
+@keyframes radar-scan {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.35;
+  }
+  70% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateY(220%);
+    opacity: 0;
+  }
+}
+
+.animate-radar-scan {
+  animation: radar-scan 6s ease-in-out infinite;
+}
+
+@keyframes aura-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.15);
+    opacity: 0.45;
+  }
+}
+
+.animate-aura-float {
+  animation: aura-float 8s ease-in-out infinite;
+}
+
+/* Agritech Green Squares Grid Background for Section 1 (matching Cropin OrbitAI filedgrid.webp) */
+.agri-grid-green {
+  background-color: #003324;
+  background-image: url("/images/filedgrid.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Animations All Over Landing Page */
+@keyframes grid-glow {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-grid-glow {
+  animation: grid-glow 4s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.88;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes shimmer-shine {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+  }
+}
+
+.animate-shimmer-shine {
+  animation: shimmer-shine 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
